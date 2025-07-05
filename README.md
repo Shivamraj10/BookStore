@@ -36,8 +36,9 @@ BookStore is a sleek, fully responsive web application built using modern fronte
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/your-username/bookstore-app.git
-cd bookstore-app
+git clone https://github.com/Shivamraj10/BookStore.git
+cd frontend
+cd backend
 ```
 
 2. Install dependencies:
@@ -67,7 +68,7 @@ Developed by Shivam Raj — a 3rd-year B.Tech CSE student at Galgotias Universit
 
 ✉️ Email: shivamrajpoddar01@gmail.com
 
-👉 Project Link: https://github.com/your_username/repo_name
+👉 Project Link: https://github.com/Shivamraj10/BookStore.git
 
 
 ### ✅ Future Improvements
@@ -76,6 +77,5 @@ Developed by Shivam Raj — a 3rd-year B.Tech CSE student at Galgotias Universit
 - Wishlist, Book ratings & reviews
 
 - Admin dashboard for adding/removing books
+
 # BookStore-App
-# BookStore-App
-# BookStore

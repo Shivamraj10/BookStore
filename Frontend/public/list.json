@@ -1,0 +1,189 @@
+[
+    {
+        "id":1,
+        "name":"Story Book",
+        "title":"Tales That Inspire.",
+        "price":0,
+        "category":"Free",
+        "image":"https://m.media-amazon.com/images/I/81VJ+MAc7YL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":2,
+        "name":"Comedy Book",
+        "title":"Laugh Lines: A Collection of Comedy.",
+        "price":0,
+        "category":"Free",
+        "image":"https://m.media-amazon.com/images/I/71ZQ0kNk3PL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":3,
+        "name":"Sports Book",
+        "title":"Champions of the Game.",
+        "price":50,
+        "category":"Sports",
+        "image":"https://m.media-amazon.com/images/I/71lu6vQSzFL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":4,
+        "name":"Science Book",
+        "title":"The Wonders of Science.",
+        "price":0,
+        "category":"Free",
+        "image":"https://m.media-amazon.com/images/I/81Y-PQhFjuL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":5,
+        "name":"Music Book",
+        "title":"The Soundtrack of Life.",
+        "price":30,
+        "category":"Song",
+        "image":"https://m.media-amazon.com/images/I/61pPmwJtrML._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":6,
+        "name":"Food Book",
+        "title":"Flavors Around the World.",
+        "price":40,
+        "category":"Food",
+        "image":"https://m.media-amazon.com/images/I/81Q-0ILmUzL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":7,
+        "name":"Adventure Book",
+        "title":"Journeys Into the Unknown.",
+        "price":10,
+        "category":"Adventure",
+        "image":"https://m.media-amazon.com/images/I/81+VET7F8DL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":8,
+        "name":"History Book",
+        "title":"Echoes of the Past.",
+        "price":30,
+        "category":"History",
+        "image":"https://m.media-amazon.com/images/I/81CY2Y5Ua7L._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":9,
+        "name":"Fantasy Book",
+        "title":"Realms of Imagination.",
+        "price":25,
+        "category":"Fantasy",
+        "image":"https://m.media-amazon.com/images/I/7138zaESFhL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":10,
+        "name":"Technology Book",
+        "title":"Innovations Shaping Tomorrow.",
+        "price":0,
+        "category":"Free",
+        "image":"https://m.media-amazon.com/images/I/81j2xIeOitL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":11,
+        "name":"Art & Creativity Book",
+        "title":"The Art of Expression.",
+        "price":65,
+        "category":"Art",
+        "image":"https://m.media-amazon.com/images/I/71Tb6H8UnHL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":12,
+        "name":"Coding for Beginners",
+        "title":"Coding Made Simple.",
+        "price":75,
+        "category":"Programming",
+        "image":"https://m.media-amazon.com/images/I/61bszeeO-OL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":13,
+        "name":"Mindfulness Book",
+        "title":"Finding Inner Peace.",
+        "price":40,
+        "category":"Wellness",
+        "image":"https://m.media-amazon.com/images/I/71uFdsSMGvL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":14,
+        "name":"Space Explorers Book",
+        "title":"Beyond the Stars.",
+        "price":0,
+        "category":"Free",
+        "image":"https://m.media-amazon.com/images/I/71CfLsTAZwL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":15,
+        "name":"Digital Marketing Essentials",
+        "title":"Mastering Digital Marketing.",
+        "price":72,
+        "category":"Marketing",
+        "image":"https://m.media-amazon.com/images/I/61Nv2KcpPgL._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":16,
+        "name":"Cooking Made Easy",
+        "title":"Simple and Delicious Recipes.",
+        "price":60,
+        "category":"Cooking",
+        "image":"https://m.media-amazon.com/images/I/810PkVSgYwL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":17,
+        "name":"Travel Diaries",
+        "title":"Wanderlust Chronicles.",
+        "price":55,
+        "category":"Travel",
+        "image":"https://m.media-amazon.com/images/I/91eaDARUcQL._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":18,
+        "name":"Mathematics Magic",
+        "title":"The Beauty of Numbers.",
+        "price":0,
+        "category":"Mathematics",
+        "image":"https://m.media-amazon.com/images/I/61aC60utxML._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":19,
+        "name":"Environmental Science Book",
+        "title":"Guardians of the Earth.",
+        "price":60,
+        "category":"Environment",
+        "image":"https://m.media-amazon.com/images/I/81kEnEoz0lL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":20,
+        "name":"Business Strategies",
+        "title":"Blueprint for Success.",
+        "price":75,
+        "category":"Business",
+        "image":"https://m.media-amazon.com/images/I/61G-kTIAZHL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":21,
+        "name":"Language Learning Book",
+        "title":"Unlocking New Languages.",
+        "price":0,
+        "category":"Free",
+        "image":"https://m.media-amazon.com/images/I/81PaMdN5m-L._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":22,
+        "name":"Philosophy Unfolded",
+        "title":"Thoughts That Shape Us.",
+        "price":68,
+        "category":"Philosophy",
+        "image":"https://m.media-amazon.com/images/I/71Y67a-kSOL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+        "id":23,
+        "name":"Psychology Insights",
+        "title":"Understanding the Mind.",
+        "price":0,
+        "category":"Free",
+        "image":"https://m.media-amazon.com/images/I/71JNWR0-WzL._AC_UY327_FMwebp_QL65_.jpg"
+    }
+    
+]
+
+

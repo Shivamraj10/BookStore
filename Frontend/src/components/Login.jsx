@@ -16,7 +16,7 @@ function Login() {
       password: data.password,
     };
     await axios
-      .post("http://localhost:4001/user/login", userInfo)
+      .post("http://localhost:4000/user/login", userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
@@ -64,7 +64,7 @@ function Login() {
               <br />
               {errors.email && (
                 <span className="text-sm text-red-500">
-                  This field is required
+                  Email is required
                 </span>
               )}
             </div>
@@ -81,7 +81,7 @@ function Login() {
               <br />
               {errors.password && (
                 <span className="text-sm text-red-500">
-                  This field is required
+                  Password is required
                 </span>
               )}
             </div>

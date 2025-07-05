@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Login from "./Login";
 import Logout from "./Logout";
 import { useAuth } from "../context/AuthProvider";
@@ -10,6 +9,7 @@ function Navbar() {
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
   const element = document.documentElement;
+
   useEffect(() => {
     if (theme === "dark") {
       element.classList.add("dark");
@@ -25,99 +25,76 @@ function Navbar() {
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setSticky(true);
-      } else {
-        setSticky(false);
-      }
+      setSticky(window.scrollY > 0);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const navItems = (
     <>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/course">Course</a>
-      </li>
-      <li>
-        <a>Contact</a>
-      </li>
-      <li>
-        <a>About</a>
-      </li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/course">Course</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/about">About</a></li>
     </>
   );
+
   return (
     <>
       <div
-        className={` max-w-screen-2xl container mx-auto md:px-20 px-4 dark:bg-slate-800 dark:text-white fixed top-0 left-0 right-0 z-50 ${
-          sticky
-            ? "sticky-navbar shadow-md bg-base-200 dark:bg-slate-700 dark:text-white duration-300 transition-all ease-in-out"
-            : ""
+        className={`max-w-screen-2xl container mx-auto md:px-20 px-4 dark:bg-slate-800 dark:text-white fixed top-0 left-0 right-0 z-50 ${
+          sticky ? "shadow-md bg-base-200 dark:bg-slate-700 duration-300" : ""
         }`}
       >
-        <div className="navbar ">
+        <div className="navbar">
           <div className="navbar-start">
             <div className="dropdown">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost lg:hidden"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
+              <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5" fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
+                  stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                    d="M4 6h16M4 12h8m-8 6h16" />
                 </svg>
               </div>
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-              >
+              <ul tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                 {navItems}
               </ul>
             </div>
-            <a className=" text-2xl font-bold cursor-pointer">bookStore</a>
+            <a className="text-2xl font-bold cursor-pointer">📚BookStore</a>
           </div>
+
           <div className="navbar-end space-x-3">
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1">{navItems}</ul>
             </div>
+
+            {/* Search Input */}
             <div className="hidden md:block">
-              <label className=" px-3 py-2 border rounded-md flex items-center gap-2">
+              <label className="px-3 py-2 border rounded-md flex items-center gap-2">
                 <input
                   type="text"
                   className="grow outline-none rounded-md px-1 dark:bg-slate-900 dark:text-white"
                   placeholder="Search"
                 />
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                <svg xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
                   fill="currentColor"
                   className="w-4 h-4 opacity-70"
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                    clipRule="evenodd"
-                  />
+                  <path fillRule="evenodd"
+                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 
+                    0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 
+                    0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                    clipRule="evenodd" />
                 </svg>
               </label>
             </div>
+
+            {/* Theme Toggle */}
             <label className="swap swap-rotate">
               {/* this hidden checkbox controls the state */}
               <input
@@ -147,10 +124,31 @@ function Navbar() {
               </svg>
             </label>
 
+            {/* Login/Profile */}
             {authUser ? (
-              <Logout />
+              <div className="dropdown dropdown-end">
+                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                  <div className="w-7 rounded-full ring ring-red-500 ring-offset-base-100 ring-offset-1">
+                    <img
+                      alt="User Avatar"
+                      src={
+                        authUser.photoURL ||
+                        "https://www.gravatar.com/avatar/?d=mp&f=y"
+                      }
+                    />
+                  </div>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                >
+                  <li><a>Profile</a></li>
+                  <li><a>Settings</a></li>
+                  <li><Logout /></li>
+                </ul>
+              </div>
             ) : (
-              <div className="">
+              <div>
                 <a
                   className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
                   onClick={() =>
@@ -162,6 +160,30 @@ function Navbar() {
                 <Login />
               </div>
             )}
+
+            {/* Cart Icon */}
+            <div
+              className="relative cursor-pointer"
+              onClick={() => (window.location.href = "/cart")}
+              title="Cart"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-9 h-7"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.09.837L5.25 6.75m0 0L6.682 14.25m0 
+                  0H17.25m-10.568 0l1.285-5.143a1.125 1.125 0 011.09-.857h7.272c.643 
+                  0 1.186.48 1.264 1.118l.622 5a1.125 1.125 0 01-1.117 
+                  1.257H8.25m8.25 0a1.5 1.5 0 11-3 0m-6 0a1.5 1.5 0 103 0" />
+              </svg>
+              <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                {JSON.parse(localStorage.getItem("cart") || "[]").length}
+              </div>
+            </div>
           </div>
         </div>
       </div>

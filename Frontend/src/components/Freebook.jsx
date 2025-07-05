@@ -12,7 +12,7 @@ function Freebook() {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("http://localhost:4001/book");
+        const res = await axios.get("http://localhost:4000/book");
 
         const data = res.data.filter((data) => data.category === "Free");
         console.log(data);
@@ -64,9 +64,9 @@ function Freebook() {
         <div>
           <h1 className="font-semibold text-xl pb-2">Free Offered Courses</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Accusantium veritatis alias pariatur ad dolor repudiandae eligendi
-            corporis nulla non suscipit, iure neque earum?
+            Browse our selection of free book-based courses designed to help you
+            learn new skills, dive into fresh topics, and grow—completely free of
+            charge!
           </p>
         </div>
 
